@@ -1,0 +1,43 @@
+{
+  "nftables": [
+    {
+      "flush": {
+        "ruleset": {
+          "family": "ip"
+        }
+      }
+    },
+    {
+      "table": {
+        "family": "ip",
+        "name": "x"
+      }
+    },
+    {
+      "chain": {
+        "family": "ip",
+        "table": "x",
+        "name": "y",
+        "type": "filter",
+        "hook": "input",
+        "prio": 0,
+        "policy": "accept"
+      }
+    },
+    {
+      "rule": {
+        "family": "ip",
+        "table": "x",
+        "chain": "y",
+        "expr": [
+          {
+            "counter": {
+              "packets": 0,
+              "bytes": 0
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

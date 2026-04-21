@@ -1,0 +1,5 @@
+/.deps/
+/.libs/
+/nft-buffer
+/nft-json-file
+/*.o
