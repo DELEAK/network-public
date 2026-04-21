@@ -1,0 +1,6 @@
+{
+    "files.associations": {
+        "nft-shared.h": "c",
+        "xshared.h": "c"
+    }
+}
